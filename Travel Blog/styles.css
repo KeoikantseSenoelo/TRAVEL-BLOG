@@ -1,0 +1,499 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    font-family: Arial, sans-serif; /* Ensures a consistent font across your site */
+}
+
+/* Container styles */
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: 1200px; /* Set a maximum width to match your layout */
+}
+
+/* Header styles */
+header {
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    margin-bottom: 0; /* Remove bottom margin */
+    transition: 0.5s ease;
+    width: 100%;
+    background-color: #f8f9fa; /* Light background for better contrast */
+}
+
+/* Logo styles */
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+}
+
+/* Navigation styles */
+.navigation {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    margin: 0 10px; /* Adjust spacing between menu items */
+    position: relative;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: brown;
+    font-size: 1em;
+    font-weight: 500;
+    transition: 0.3s ease;
+    margin-left: 30px;
+    display: block;
+}
+
+/* Main content styles */
+main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+/* Featured Destination and Popular Posts */
+.featured-destination,
+.popular-posts {
+    margin-bottom: 1rem;
+}
+
+.post1,
+.post2 {
+    margin-bottom: 1rem;
+}
+
+/* Sidebar styles */
+aside {
+    width: 25%;
+    background-color: #f4f4f4;
+    padding: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .menu {
+        flex-direction: column;
+        margin-top: 1rem;
+    }
+
+    .menu li {
+        margin-bottom: 0.5rem;
+    }
+
+    aside {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1040px) {
+    header {
+        padding: 12px 20px;
+    }
+}
+
+/* Section styles */
+section {
+    margin-top: 50px;
+    position: relative;
+    margin-right: 10px; /* Adjust padding as needed */
+}
+
+/* Image Container */
+.img-container {
+    position: relative;
+    height: 400px; /* Fixed height to crop the lower part of the image */
+    overflow: hidden;
+    border-radius: 4px;
+    margin-right: 100px;
+    max-width: 100%; /* Ensure container doesn’t exceed available width */
+}
+
+.img-container img {
+    width: 100%;
+    height: 800px;
+    object-fit: cover; /* Ensure the image covers the container */
+}
+
+/* Text Overlay Styles */
+.text-overlay {
+    position: absolute;
+    top: 20%; /* Adjust to place text appropriately */
+    left: 5%;
+    transform: translateY(0);
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    padding: 20px;
+    border-radius: 8px;
+    width: 40%; /* Adjust width as needed */
+    z-index: 1; /* Ensure text overlay is above the image */
+}
+
+.text h1 {
+    margin-bottom: 10px;
+}
+
+.text p {
+    margin-bottom: 15px;
+}
+
+.text a {
+    background-color: rgb(224, 16, 68);
+    padding: 15px 35px;
+    color: wheat;
+    font-size: 1.3em;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 2px;
+}
+
+/* Social Icons Styles */
+.social-icons {
+    position: absolute; /* Keeps the icons fixed relative to the viewport */
+    right: 5px; /* Distance from the right edge */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Perfectly center the icons */
+    display: flex;
+    flex-direction: column; /* Stack icons vertically */
+    z-index: 888; /* Ensure it's above other content */
+    transition: 0.5s ease;
+}
+
+/* Style each icon link */
+.social-icons a {
+    color: rgb(25, 25, 190); /* Icon color */
+    font-size: 2em; /* Size of the icons */
+    text-decoration: none; /* Remove underline from links */
+    margin-bottom: 20px; /* Space between icons */
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+    display: flex;
+    align-items: center; /* Align text and icon vertically */
+}
+
+/* Add spacing between the icon and the text */
+.social-icons a i {
+    margin-right: 8px; /* Space between icon and text */
+}
+
+/* Hover effect */
+.social-icons a:hover {
+    color: darkpink; /* Change color on hover */
+    transform: scale(1.2); /* Slightly enlarge the icon */
+}
+
+/* Sidebar Categories */
+.sidebar-categories {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.sidebar-categories h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.sidebar-categories ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar-categories li {
+    margin-bottom: 10px;
+}
+
+.sidebar-categories a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.sidebar-categories a:hover {
+    color: rgb(224, 16, 68); /* Highlight color */
+}
+
+/* Reviews Section */
+.reviews {
+    display: flex;
+    justify-content: space-between; /* Space blocks evenly */
+    gap: 20px; /* Space between blocks */
+    margin-top: 20px; /* Space above the review section */
+    max-width: 100%; /* Ensure it doesn’t exceed the width of its container */
+    width: 100%; /* Ensure it takes full width available */
+}
+
+.review-block {
+    flex: 1; /* Allow blocks to take up equal width */
+    background-color: #f9f9f9; /* Light background for contrast */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Padding inside the blocks */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    max-width: calc(50% - 10px); /* Adjust to fit within container with gap included */
+    box-sizing: border-box; /* Include padding and border in the element's total width */
+    margin-bottom: 20px; /* Space below each block */
+}
+
+.review-block h2 {
+    margin-bottom: 10px; /* Space below the title */
+    font-size: 1.2em; /* Slightly larger font for titles */
+}
+
+.review-block p {
+    font-size: 1em; /* Regular font size for text */
+    line-height: 1.6; /* Better readability */
+}
+
+/* Popular Posts Section */
+.popular-posts {
+    margin: 2rem 0; /* Space around the section */
+    text-align: center; /* Center the heading */
+}
+
+.popular-posts h2 {
+    font-size: 2em; /* Size of the heading */
+    margin-bottom: 1rem; /* Space below the heading */
+    color: #333; /* Heading color */
+}
+
+.posts-container {
+    display: flex;
+    flex-wrap: wrap; /* Wrap posts to the next line on smaller screens */
+    justify-content: space-between; /* Space posts evenly */
+    gap: 1rem; /* Space between posts */
+}
+
+.post {
+    width: calc(33.333% - 1rem); /* 3 posts per row, accounting for gaps */
+    box-sizing: border-box; /* Include padding and border in width calculation */
+    margin-bottom: 1rem; /* Space below each post */
+}
+
+.post-link {
+    display: block;
+    text-decoration: none; /* Remove underline from the link */
+}
+
+.post-image {
+    width: 100%;
+    height: 200px; /* Fixed height for images */
+    object-fit: cover; /* Cover the container without distortion */
+    border-radius: 8px; /* Optional: rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: shadow for depth */
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.post-link:hover .post-image {
+    transform: scale(1.05); /* Slightly enlarge the image on hover */
+}
+
+.post-content {
+    padding: 10px; /* Space around the text */
+}
+
+.post-description {
+    font-size: 1.2em; /* Larger font size for visibility */
+    color: #333; /* Text color */
+}
+
+/* Footer Styles */
+footer {
+    background-color: #f1f1f1; /* Light background for the footer */
+    padding: 1rem 0; /* Padding around the footer content */
+    text-align: center; /* Center the text */
+    border-top: 1px solid #ddd; /* Optional: add a top border for separation */
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-content p {
+    font-size: 1em; /* Font size of the footer text */
+    color: #333; /* Text color */
+    margin: 0; /* Remove default margin */
+}
+
+/* Subscription Form Styles */
+#subscription {
+    margin-top: 2rem; /* Space above the subscription section */
+    padding: 1rem; /* Padding around the subscription section */
+    background-color: #f9f9f9; /* Light background color */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+}
+
+#subscription h2 {
+    margin-bottom: 1rem; /* Space below the heading */
+    font-size: 1.5em; /* Size of the heading */
+    text-align: center; /* Center the heading text */
+}
+
+.subscription-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px; /* Limit the width of the form */
+    margin: 0 auto; /* Center the form */
+}
+
+.form-group {
+    margin-bottom: 1rem; /* Space between form fields */
+    width: 100%; /* Full width of the form */
+}
+
+.form-group label {
+    display: block; /* Ensure labels are block elements */
+    margin-bottom: 0.5rem; /* Space below labels */
+    font-size: 1em; /* Font size of labels */
+}
+
+.form-group input {
+    width: 100%; /* Full width of input fields */
+    padding: 0.5rem; /* Padding inside input fields */
+    border: 1px solid #ddd; /* Border around input fields */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 1em; /* Font size inside input fields */
+}
+
+button {
+    padding: 0.75rem 1.5rem; /* Padding around the button text */
+    border: none; /* Remove default border */
+    border-radius: 4px; /* Rounded corners */
+    background-color: rgb(224, 16, 68); /* Background color of the button */
+    color: white; /* Text color */
+    font-size: 1em; /* Font size of the button text */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+button:hover {
+    background-color: darkred; /* Darker background color on hover */
+}
+
+/* Main Content Styles */
+main {
+    display: flex;
+    gap: 1rem; /* Space between the destination and sidebar */
+    margin-top: 1rem;
+}
+
+/* Top Destination Section */
+.top-destination {
+    text-align: center; /* Center the heading and image */
+    margin: 2rem 0; /* Space around the section */
+}
+
+.top-destination h2 {
+    font-size: 2em; /* Size of the heading */
+    margin-bottom: 1rem; /* Space below the heading */
+    color: #333; /* Heading color */
+}
+
+.destination-link {
+    display: inline-block; /* Ensure the image is treated as a block-level element */
+    text-decoration: none; /* Remove underline from the link */
+}
+
+.destination-image {
+    width: 100%; /* Make the image responsive */
+    max-width: 800px; /* Set a maximum width for larger screens */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional: rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: shadow for depth */
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.destination-image:hover {
+    transform: scale(1.05); /* Slightly enlarge the image on hover */
+}
+
+/* Search Bar */
+.search-bar {
+    margin-left: auto;
+}
+
+.search-bar input {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
+    width: 200px; /* Adjust width as needed */
+}
+
+.search-bar input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Top Destination Section */
+.top-destination {
+    display: flex;
+    flex-direction: column; /* Stack the heading and image vertically */
+    align-items: center; /* Center content horizontally */
+    text-align: center; /* Center text within the section */
+    margin: 2rem auto; /* Center the section horizontally and add vertical spacing */
+    width: 100%; /* Full width of the parent container */
+}
+
+.top-destination .destination-link {
+    display: inline-block; /* Ensure the image is treated as a block-level element */
+    text-decoration: none; /* Remove underline from the link */
+}
+
+.top-destination h2 {
+    font-size: 2em; /* Size of the heading */
+    margin-bottom: 1rem; /* Space below the heading */
+    color: #333; /* Heading color */
+}
+
+.destination-image {
+    max-width: 100%; /* Ensure the image doesn’t exceed its container’s width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional: rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: shadow for depth */
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.destination-image:hover {
+    transform: scale(1.05); /* Slightly enlarge the image on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .top-destination {
+        width: 90%; /* Adjust width for smaller screens */
+    }
+}

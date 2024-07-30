@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Keoikantse</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .container {
+            flex: 1;
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            background: #007BFF;
+            color: white;
+            padding: 10px 0;
+        }
+        header nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        header nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+            margin: 0 15px; /* Added margin for spacing */
+        }
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        .about-section, .contact-section {
+            margin-bottom: 40px;
+        }
+        .about-section h1, .contact-section h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        .about-section p, .contact-section p {
+            margin-bottom: 20px;
+        }
+        .highlighted {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-left: 5px solid #007BFF;
+        }
+        .contact-section {
+            background-color: #f1f1f1;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .contact-section form {
+            display: flex;
+            flex-direction: column;
+        }
+        .contact-section form label {
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        .contact-section form input, .contact-section form textarea, .contact-section form button {
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .contact-section form button {
+            background-color: #007BFF;
+            color: white;
+            cursor: pointer;
+            border: none;
+        }
+        .contact-section form button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="blog.html">Blog</a>
+            <a href="destinations.html">Destinations</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="about-section">
+            <h1>About Kantse</h1>
+            <p>Hi, I am Kantse, and I’m here to help you save money on your next trip while traveling safely.</p>
+            <p>Have you ever said one of the following:</p>
+            <ul>
+                <li>“How do I find the money to travel? It seems too expensive for me.”</li>
+                <li>“Where do I find the best travel deals?”</li>
+                <li>“How do I save money on flights, accommodation, and other big expenses?”</li>
+                <li>“How do I plan my trip?”</li>
+                <li>“How do I stay safe and healthy?”</li>
+                <li>“How do I maximize my time?”</li>
+                <li>“I want to travel more, but I don’t know the first step.”</li>
+            </ul>
+            <p>You are not alone. Since I started this blog, I’ve helped alot of people answer those questions and travel more for less with time-tested and proven tips and advice. By using this website, you can spend less time searching the Internet and being overwhelmed with information and more time doing the one thing you want to do: travel.</p>
+            <div class="highlighted">
+                <h2>Teaching People to Travel Solo Safely</h2>
+                <p>I believe that with the right research and preparation, a person can safely travel on their own almost anywhere in the world. Teaching people how to travel solo is my passion; I see it as a vocation.</p>
+                <p>In many parts of the world, it’s common for people to travel solo and independently. In my home country, South Africa, it’s far less common. There are many reasons for this, including a major political party seeking to consolidate power and erode people’s rights, and a 24/7 cable news environment that seeks to alarm rather than inform.</p>
+                <p>I started this blog to show people what it’s like to travel solo. There is a lot of fearmongering out there designed to scare people away from traveling on their own; I’m here to clear up the myths.</p>
+            </div>
+        </div>
+        <div class="contact-section">
+            <h2>Let's Work Together</h2>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Travel the world. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+
