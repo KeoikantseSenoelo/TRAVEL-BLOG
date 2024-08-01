@@ -158,22 +158,11 @@ section {
     background-color: rgba(255, 255, 255, 0.8);
     padding: 20px;
     border-radius: 8px;
+    width:70%;
     z-index: 1; 
 }
 
- @media (max-width: 768px) {
-    .text-overlay {
-        width: 80%; 
-        left: 10%;
-    }
-    .img-container {
-        height: auto;
-    }
-    .img-container img {
-        height: auto; 
-    }   
-    
-.text h1 {
+    .text h1 {
     margin-bottom: 10px;
 }
 
